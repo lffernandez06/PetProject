@@ -1,10 +1,10 @@
-<div class="">
-  <div class="">
-    <figure>
+<div class="w-full max-w-4xl mx-auto p-2">
+  <div class="bg-white shadow rounded-xl overflow-hidden">
+    <figure class="w-full">
       <img
         src="https://cloverco.com/wp-content/uploads/2022/03/pets-g027269661_1920-1536x1023.jpg"
         alt="Shoes"
-        class="w-full object-cover"
+        class="w-full object-cover max-h-96"
       />
       <div class="cardcontainer mb-2">
         <div class="flex p-2 items-center">
@@ -30,52 +30,41 @@
       </div>
     </figure>
 
-    <!-- comment image -->
-
-    <div class="flex-col">
-      <!-- image plus comment -->
+    <!-- comments section -->
+    <div class="flex flex-col gap-3 p-2 ml-4">
       @for (item of commentUserArray(); track $index) {
-      <div class="flex addCommentContainer  w-full">
-        <div
-          class=" shrink-0 mt-2 ml-2 overflow-hidden w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
-        >
-        <!-- image user -->
+      <div class="flex gap-2 w-full items-start">
+        <!-- user avatar -->
+        <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden mt-1">
           <img
             src="https://cloverco.com/wp-content/uploads/2022/03/pets-g027269661_1920-1536x1023.jpg"
             alt="Shoes"
-            class="w-full h-full object-cover rounded-full"
+            class="w-full h-full object-cover"
           />
-
         </div>
-        <!-- user comment -->
-        <div
-          class="m-1 overflow-hidden text-[8px] sm:text-[10px] md:text-[14px] lg:text-[20px]"
-        >
-          <h2 class="ml-5 font-medium">#User name</h2>
-          <p
-            class="paragrafContainer w-full flex-1 ml-4 text-[8px] sm:text-[10px] md:text-[14px] lg:text-[20px]"
-          >
+        <!-- comment text -->
+        <div class="flex flex-col w-full text-xs sm:text-sm md:text-base lg:text-lg overflow-hidden">
+          <h2 class="font-medium text-gray-800">#User name</h2>
+          <p class="text-gray-600 break-words">
             {{ item.comment }}
           </p>
         </div>
       </div>
-
       }
     </div>
 
-    <!--  -->
-    <div class="flex items-center gap-2 w-full">
+    <!-- input section -->
+    <div class="flex items-center gap-2 w-full p-2">
       <input
-        class="flex-1 placeholder:text-gray-200 border border-gray-300 hover:border-green-400 focus:border-green-500 focus:ring-green-500 focus:outline-none focus:ring-1 transition duration-200 ease-in-out rounded-2xl px-3 py-1 font-normal my-2 overflow-hidden"
+        class="flex-1 placeholder:text-gray-400 border border-gray-300 hover:border-green-400 focus:border-green-500 focus:ring-green-500 focus:outline-none focus:ring-1 transition duration-200 ease-in-out rounded-2xl px-3 py-2 text-sm sm:text-base"
         [value]="commentUser()"
         (input)="commentUser.set(txtComment.value)"
-        placeholder="comments"
+        placeholder="Write a comment..."
         #txtComment
       />
       @if (commentUser()) {
-
       <svg
-        class="cursor-pointer hover:text-blue-500"
+        class="cursor-pointer hover:text-blue-500 flex-shrink-0"
         (click)="sendComment()"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -91,7 +80,6 @@
           d="M22.153 3.553L11.176 21.004l-1.67-8.596L2 7.898zM9.456 12.444l12.696-8.89"
         />
       </svg>
-
       }
     </div>
   </div>
