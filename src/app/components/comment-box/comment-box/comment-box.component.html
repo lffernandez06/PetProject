@@ -31,9 +31,9 @@
     </figure>
 
     <!-- comments section -->
-    <div class="flex flex-col gap-3 p-2 ml-4">
+    <div class="max-h-[300px]  overflow-y-scroll flex flex-col gap-3 p-2 ml-4  mr-1">
       @for (item of commentUserArray(); track $index) {
-      <div class="flex gap-2 w-full items-start">
+      <div class=" flex gap-2 w-full items-start">
         <!-- user avatar -->
         <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden mt-1">
           <img
@@ -45,7 +45,7 @@
         <!-- comment text -->
         <div class="flex flex-col w-full text-xs sm:text-sm md:text-base lg:text-lg overflow-hidden">
           <h2 class="font-medium text-gray-800">#User name</h2>
-          <p class="text-gray-600 break-words">
+          <p class="paragrafContainer text-gray-600 break-words ">
             {{ item.comment }}
           </p>
         </div>
@@ -64,7 +64,7 @@
       />
       @if (commentUser()) {
       <svg
-        class="cursor-pointer hover:text-blue-500 flex-shrink-0"
+        class="cursor-pointer hover:text-green-400 flex-shrink-0"
         (click)="sendComment()"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
