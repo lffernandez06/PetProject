@@ -1,0 +1,61 @@
+<div
+  class="fixed  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-full sm:w-xs sm:h-full md:w-xl md:h-full lg:w-2xl lg:h-full bg-white overflow-hidden shadow-md p-2 rounded-[10px] max-h-[300px]"
+>
+  <h1 class="font-medium text-base sm:text-xs md:text-base lg:text-lg">
+    #UserName
+  </h1>
+  <input
+    placeholder="¿Que estas pensando?"
+    class="
+
+
+    h-20
+    placeholder:text-gray-300 w-full text-[10px] p-1 pl-2 focus:border-green-500 focus:ring-green-500 focus:outline-none focus:ring-2 border border-green-300 rounded-[10px] focus:"
+  />
+  <!-- Icons -->
+  <div class="cursor-pointer flex border-b-[0.5px] border-gray-200 gap-2 mt-2 items-center">
+
+    <div class="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+      <path fill="#0b0909" fill-rule="evenodd" d="M7.72 2.79L5.5 5.75a1.25 1.25 0 0 1-1 .5H4A2.75 2.75 0 0 0 1.25 9v10A2.75 2.75 0 0 0 4 21.75h16A2.75 2.75 0 0 0 22.75 19V9A2.75 2.75 0 0 0 20 6.25h-.5a1.25 1.25 0 0 1-1-.5l-2.22-2.96a1.35 1.35 0 0 0-1.08-.54H8.8c-.425 0-.825.2-1.08.54M12 8.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5" clip-rule="evenodd" />
+      </svg>
+
+    </div>
+    <div class="text-xs"  >
+    Photo/Video
+    </div>
+
+
+    </div>
+
+
+  <!-- Close icon -->
+
+  <svg
+  (click)="closeEvent()"
+  class="cursor-pointer absolute top-1 right-1"
+  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<path fill="none" stroke="#0b0909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" />
+  </svg>
+
+  <!-- Button -->
+  <button
+
+
+    class="cursor-pointer absolute right-1 bottom-1 bg-white hover:bg-green-500 hover:text-white rounded-[10px] shadow-md p-2 text-gray-700 font-medium"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#0b0909"
+        fill-rule="evenodd"
+        d="M1.846 7.151a.75.75 0 0 0-.228 1.376l6.517 3.915l6.22-4.355a.75.75 0 0 1 .86 1.229l-6.22 4.355l1.45 7.463a.75.75 0 0 0 1.372.256L22.792 3.94a.75.75 0 0 0-.793-1.133z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>

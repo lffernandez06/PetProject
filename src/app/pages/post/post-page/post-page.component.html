@@ -10,14 +10,25 @@
 
       <app-search-bar />
 
+
+      <app-add-bottom (newPostSwitch)="newPostWindow($event)" />
+
+      @if (newPost()) {
+
+        <app-new-post-window (closeWindow)="closeWindow($event)" />
+
+      }
+
+
+
       <app-card (showWindow)="setStatus($event)" />
 
        @if (showWindow()) {
         <div
-         class="fixed inset-0  flex items-center justify-center z-50"
+         class="fixed inset-0 flex items-center justify-center z-50"
         >
           <div
-            class=" bg-white p-6 rounded-lg w-100 md:w-150 lg:w-200 shadow-lg relative"
+            class=" bg-white p-6 rounded-lg w-100 md:w-150 lg:w-200 shadow-md relative"
           >
             <!-- Botón de cierre opcional -->
             <button
@@ -27,16 +38,19 @@
               ✖
             </button>
 
-            <!-- Contenido del modal -->
+            <!-- Contenido de la seccion de comentarios -->
             <app-comment-box />
           </div>
         </div>
       }
 
+      <app-card (showWindow)="setStatus($event)" />
+      <app-card (showWindow)="setStatus($event)" />
 
-      <app-card />
 
-      <app-card />
+
+
+
 
     </div>
   </div>
